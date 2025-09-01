@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFest Organizer - College Events Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="organizer.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+     <!-- Navbar -->
+     <div class="navbar" style="background-color: transparent;">
+        <div class="nav-item">
+            <a href="darkCode.html">Home</a>
+        </div>
+        <div class="nav-item">
+            <a href="Event.html">Events</a>
+        </div>
+        <div class="nav-item">
+            <a href="Contact.html">Contact</a>
+        </div>  
+        <div class="nav-item" >
+            <a href="prize.html">Prize Winner</a>
+        </div>
+        <div class="nav-item">
+            <a href="organizer.html">Organize events</a>
+        </div>       
+    </div>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Organize Your Next Tech Event</h1>
+            <p>Transform your tech ideas into reality with our comprehensive event management platform</p>
+            <button class="cta-button">Start Organizing</button>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Easy Planning</h3>
+                <p>Streamlined process for event organization</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Analytics</h3>
+                <p>Track registration and engagement</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Collaboration</h3>
+                <p>Work with teams efficiently</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="register" class="register-section">
+        <h2>Register as an Organizer</h2>
+        <div class="register-form">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="College Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="College/University Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Department" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Contact Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Create Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Previous Experience in Event Organization (if any)"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Create Account</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="upcoming-events">
+        <h2>Upcoming Tech Events</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-date">MAR 15</div>
+                <h3>AI Summit 2024</h3>
+                <p>Artificial Intelligence & Machine Learning Conference</p>
+                <button class="register-button">Register Now</button>
+            </div>
+            <div class="event-card">
+                <div class="event-date">APR 20</div>
+                <h3>Hackathon 2024</h3>
+                <p>24-Hour Coding Challenge</p>
+                <button class="register-button">Register Now</button>
+            </div>
+            <div class="event-card">
+                <div class="event-date">MAY 10</div>
+                <h3>Tech Expo</h3>
+                <p>Innovation & Technology Exhibition</p>
+                <button class="register-button">Register Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="organize-event">
+        <h2>Organize Your Event</h2>
+        <div class="organize-form">
+            <form>
+                <input type="text" placeholder="Event Name" required>
+                <input type="date" placeholder="Event Date" required>
+                <input type="text" placeholder="Venue" required>
+                <textarea placeholder="Event Description" required></textarea>
+                <button type="submit" class="submit-button">Submit Proposal</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@techfesthub.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechFestHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script >
+         const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Mouse position tracking
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetRotationX = 0;
+        let targetRotationY = 0;
+        let currentRotationX = 0;
+        let currentRotationY = 0;
+
+        // Track mouse movement
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+            mouseY = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
+            
+            // Convert mouse position to rotation angles
+            targetRotationY = mouseX * Math.PI * 0.5;
+            targetRotationX = mouseY * Math.PI * 0.5;
+        });
+
+        class Particle {
+            constructor() {
+                this.radius = Math.random() * Math.PI * 2;
+                this.phi = Math.random() * Math.PI;
+                this.size = Math.random() * 2 + 1;
+                this.baseRadius = 150;
+                this.calculatePosition();
+                this.color = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${Math.random() * 0.5 + 0.5})`;
+            }
+
+            calculatePosition() {
+                this.x = this.baseRadius * Math.sin(this.phi) * Math.cos(this.radius);
+                this.y = this.baseRadius * Math.sin(this.phi) * Math.sin(this.radius);
+                this.z = this.baseRadius * Math.cos(this.phi);
+            }
+
+            rotate(angleX, angleY) {
+                // Rotate around Y axis
+                const cosY = Math.cos(angleY);
+                const sinY = Math.sin(angleY);
+                const tempX = this.x * cosY - this.z * sinY;
+                const tempZ = this.x * sinY + this.z * cosY;
+                this.x = tempX;
+                this.z = tempZ;
+
+                // Rotate around X axis
+                const cosX = Math.cos(angleX);
+                const sinX = Math.sin(angleX);
+                const tempY = this.y * cosX - this.z * sinX;
+                this.z = this.y * sinX + this.z * cosX;
+                this.y = tempY;
+            }
+
+            draw() {
+                const scale = 1000 / (1000 + this.z);
+                const x2d = this.x * scale + canvas.width / 2;
+                const y2d = this.y * scale + canvas.height / 2;
+
+                ctx.globalAlpha = scale * 0.5;
+                ctx.beginPath();
+                ctx.arc(x2d, y2d, this.size * scale, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+
+                // Add glow effect
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = this.color;
+            }
+        }
+
+        const particles = Array.from({ length: 500 }, () => new Particle());
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Smooth rotation transition
+            const ease = 0.05;
+            currentRotationX += (targetRotationX - currentRotationX) * ease;
+            currentRotationY += (targetRotationY - currentRotationY) * ease;
+
+            // Sort particles by z-index for proper depth rendering
+            particles.sort((a, b) => b.z - a.z);
+
+            // Apply rotation to particles
+            particles.forEach(particle => {
+                particle.calculatePosition(); // Reset position
+                particle.rotate(currentRotationX, currentRotationY);
+                particle.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Add auto-rotation when mouse is not moving
+        let mouseTimer;
+        let autoRotate = true;
+        let autoRotationAngle = 0;
+
+        document.addEventListener('mousemove', () => {
+            autoRotate = false;
+            clearTimeout(mouseTimer);
+            mouseTimer = setTimeout(() => {
+                autoRotate = true;
+            }, 2000); // Start auto-rotation after 2 seconds of no mouse movement
+        });
+
+        function updateAutoRotation() {
+            if (autoRotate) {
+                autoRotationAngle += 0.002;
+                targetRotationY = Math.sin(autoRotationAngle) * 0.5;
+                targetRotationX = Math.cos(autoRotationAngle) * 0.3;
+            }
+            requestAnimationFrame(updateAutoRotation);
+        }
+
+        updateAutoRotation();
+    </script>
+</body>
+</html>

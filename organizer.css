@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Michroma", serif;
+}
+
+body {
+    background-color: #0a0a2e;
+    color: #ffffff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.nav-item {
+    margin: 0 15px;
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 81, 255, 0.3);
+    border-radius: 0.5rem;
+    background-color: #0a0a1f;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(38, 0, 255, 0.1);
+}
+
+.nav-item:hover {
+    border-color: rgba(52, 113, 235, 0.9);
+    box-shadow: 0 0 30px rgba(38, 0, 255, 0.3);
+    transform: translateY(-6px);
+    transition: all 0.5s ease;
+}
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Michroma', sans-serif;
+    font-size: 18px;
+    opacity: 0.8;
+    background-color: transparent;
+    transition: all 0.3s ease;
+   
+    
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+   
+}
+
+.nav-item a:hover {
+   
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.91);
+    
+    box-shadow: none;
+    box-sizing: unset;
+    background: transparent;
+    text-shadow: 0 0 10px rgb(130, 255, 225, 2);
+    
+    
+}
+
+/* Register Section */
+.register-section {
+    padding: 8rem 5% 5rem;
+    background: #0d1117;
+}
+
+.register-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.register-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://source.unsplash.com/random/1920x1080/?technology') center/cover;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Buttons */
+.cta-button, .register-button, .submit-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover, .register-button:hover, .submit-button:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+/* Features Section */
+#features {
+    padding: 5rem 10%;
+    background: #0d1117;
+    position: relative;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 10%;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.2);
+}
+
+.event-date {
+    font-size: 1.2rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+/* Organize Form */
+.organize-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.organize-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.organize-form input,
+.organize-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.organize-form input:focus,
+.organize-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.organize-form textarea {
+    min-height: 150px;
+}
+
+/* Footer */
+footer {
+    background: #0d1117;
+    padding: 3rem 10% 1rem;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    .register-form {
+        padding: 1rem;
+    }
+}

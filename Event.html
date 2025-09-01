@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Events 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="Event.css" rel="stylesheet">
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>TECH EVENTS 2025</h1>
+                <p>Where Innovation Meets Excellence</p>
+            </div>
+        </div>
+
+
+        <!-- Navbar -->
+        <div class="navbar" style="background-color: transparent;">
+            <div class="nav-item">
+                <a href="darkCode.html">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="Event.html">Events</a>
+            </div>
+            <div class="nav-item">
+                <a href="Contact.html">Contact</a>
+            </div>  
+            <div class="nav-item" >
+                <a href="prize.html">Prize Winner</a>
+            </div>  
+            <div class="nav-item" style="background-color: transparent;">
+                <a href="organizer.html">Organize events</a>
+            </div>     
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>Hackathon 2025</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>March 15-16, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Main Campus Arena</span>
+                            </div>
+                        </div>
+                        <p>48-hour coding challenge to build innovative solutions</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="sword"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>RoboWars</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>March 20, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Engineering Ground</span>
+                            </div>
+                        </div>
+                        <p>Battle of custom-built combat robots</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>Frontend Showdown</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>March 25, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>CS Department</span>
+                            </div>
+                        </div>
+                        <p>Create stunning web interfaces in real-time</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>AI Summit</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>April 5, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Tech Auditorium</span>
+                            </div>
+                        </div>
+                        <p>Exploring the future of artificial intelligence</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="terminal"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>Competitive Coding</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>April 10, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Virtual Event</span>
+                            </div>
+                        </div>
+                        <p>Test your algorithmic skills against the best</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="gamepad"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>Game Dev Challenge</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>April 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Media Lab</span>
+                            </div>
+                        </div>
+                        <p>Create an innovative game in 24 hours</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="wifi"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>IoT Workshop</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>April 20, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Engineering Block</span>
+                            </div>
+                        </div>
+                        <p>Hands-on experience with IoT devices</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>Startup Pitch</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>April 25, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Business Center</span>
+                            </div>
+                        </div>
+                        <p>Present your tech startup idea to investors</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="event-details">
+                        <h3>Tech Fest</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span>May 1-3, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>College Ground</span>
+                            </div>
+                        </div>
+                        <p>Annual technology festival and exhibition</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Join the Future?</h2>
+                <p>Register now to secure your spot at these exciting events!</p>
+                <a href="registration.html"><button class="register-btn">Register Now</button></a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 College Tech Events. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Mouse position tracking
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetRotationX = 0;
+        let targetRotationY = 0;
+        let currentRotationX = 0;
+        let currentRotationY = 0;
+
+        // Track mouse movement
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+            mouseY = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
+            
+            // Convert mouse position to rotation angles
+            targetRotationY = mouseX * Math.PI * 0.5;
+            targetRotationX = mouseY * Math.PI * 0.5;
+        });
+
+        class Particle {
+            constructor() {
+                this.radius = Math.random() * Math.PI * 2;
+                this.phi = Math.random() * Math.PI;
+                this.size = Math.random() * 2 + 1;
+                this.baseRadius = 150;
+                this.calculatePosition();
+                this.color = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${Math.random() * 0.5 + 0.5})`;
+            }
+
+            calculatePosition() {
+                this.x = this.baseRadius * Math.sin(this.phi) * Math.cos(this.radius);
+                this.y = this.baseRadius * Math.sin(this.phi) * Math.sin(this.radius);
+                this.z = this.baseRadius * Math.cos(this.phi);
+            }
+
+            rotate(angleX, angleY) {
+                // Rotate around Y axis
+                const cosY = Math.cos(angleY);
+                const sinY = Math.sin(angleY);
+                const tempX = this.x * cosY - this.z * sinY;
+                const tempZ = this.x * sinY + this.z * cosY;
+                this.x = tempX;
+                this.z = tempZ;
+
+                // Rotate around X axis
+                const cosX = Math.cos(angleX);
+                const sinX = Math.sin(angleX);
+                const tempY = this.y * cosX - this.z * sinX;
+                this.z = this.y * sinX + this.z * cosX;
+                this.y = tempY;
+            }
+
+            draw() {
+                const scale = 1000 / (1000 + this.z);
+                const x2d = this.x * scale + canvas.width / 2;
+                const y2d = this.y * scale + canvas.height / 2;
+
+                ctx.globalAlpha = scale * 0.5;
+                ctx.beginPath();
+                ctx.arc(x2d, y2d, this.size * scale, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+
+                // Add glow effect
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = this.color;
+            }
+        }
+
+        const particles = Array.from({ length: 500 }, () => new Particle());
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Smooth rotation transition
+            const ease = 0.05;
+            currentRotationX += (targetRotationX - currentRotationX) * ease;
+            currentRotationY += (targetRotationY - currentRotationY) * ease;
+
+            // Sort particles by z-index for proper depth rendering
+            particles.sort((a, b) => b.z - a.z);
+
+            // Apply rotation to particles
+            particles.forEach(particle => {
+                particle.calculatePosition(); // Reset position
+                particle.rotate(currentRotationX, currentRotationY);
+                particle.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Add auto-rotation when mouse is not moving
+        let mouseTimer;
+        let autoRotate = true;
+        let autoRotationAngle = 0;
+
+        document.addEventListener('mousemove', () => {
+            autoRotate = false;
+            clearTimeout(mouseTimer);
+            mouseTimer = setTimeout(() => {
+                autoRotate = true;
+            }, 2000); // Start auto-rotation after 2 seconds of no mouse movement
+        });
+
+        function updateAutoRotation() {
+            if (autoRotate) {
+                autoRotationAngle += 0.002;
+                targetRotationY = Math.sin(autoRotationAngle) * 0.5;
+                targetRotationX = Math.cos(autoRotationAngle) * 0.3;
+            }
+            requestAnimationFrame(updateAutoRotation);
+        }
+
+        updateAutoRotation();
+    </script>
+</body>
+</html>

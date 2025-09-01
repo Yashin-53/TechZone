@@ -1,0 +1,493 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    font-family: "Michroma", serif;
+    background-color: #0a0a1f;
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(192, 210, 242, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(53, 3, 134, 0.1) 0%, transparent 50%);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.nav-item {
+    margin: 0 15px;
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 81, 255, 0.3);
+    border-radius: 0.5rem;
+    background-color: #0a0a1f;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(38, 0, 255, 0.1);
+}
+
+.nav-item:hover {
+    border-color: rgba(52, 113, 235, 0.9);
+    box-shadow: 0 0 30px rgba(38, 0, 255, 0.3);
+    transform: translateY(-6px);
+    transition: all 0.5s ease;
+}
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Michroma', sans-serif;
+    font-size: 18px;
+    opacity: 0.8;
+    background-color: transparent;
+    transition: all 0.3s ease;
+   
+    
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+    
+}
+
+.nav-item a:hover {
+   
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.91);
+    box-shadow: none;
+    box-sizing: unset;
+    background: transparent;
+    text-shadow: 0 0 10px rgb(130, 255, 225, 2);
+}
+
+
+/* Winners Header */
+.winners-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.winners-header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #0008ff, #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.winners-header p {
+    font-size: 1.5rem;
+    color: #d1d1d1;
+}
+
+.header-line {
+    height: 2px;
+    width: 100px;
+    margin: 1rem auto;
+    background: linear-gradient(to right, #000dff, #00ffff);
+    position: relative;
+}
+
+/* Podium Section */
+.podium-wrapper {
+    margin-bottom: 4rem;
+}
+
+.podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.podium-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.winner-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(55, 0, 255, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.winner-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(110, 30, 185, 0.5);
+    transition: all 0.5s ease;
+}
+
+.medal {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.medal span {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.875rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #1100ff, #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.first .medal {
+    color: #ffd700;
+}
+
+.second .medal {
+    color: #c0c0c0;
+}
+
+.third .medal {
+    color: #cd7f32;
+}
+
+.team-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.prize {
+    font-size: 1.125rem;
+    color: #00ffff;
+}
+
+.podium-block {
+    background: linear-gradient(45deg, rgba(9, 1, 90, 0.2), rgba(222, 228, 228, 0.2));
+    border: 1px solid rgba(7, 22, 193, 0.1);
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.first .podium-block {
+    height: 200px;
+    box-shadow: 0 0 20px rgba(110, 30, 185, 0.5);
+}
+
+.second .podium-block {
+    height: 150px;
+    box-shadow: 0 0 20px rgba(110, 30, 185, 0.5);
+}
+
+.third .podium-block {
+    height: 100px;
+    box-shadow: 0 0 20px rgba(113, 30, 185, 0.5);
+}
+
+/* Category Winners */
+.winners-grid {
+    margin-bottom: 4rem;
+}
+
+.winners-grid h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #d7d7f0;
+    text-shadow: 0 0 10px rgba(136, 181, 241, 0.5);
+}
+
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 136, 255, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #8000ff;
+    box-shadow: 0 0 30px rgba(0, 157, 255, 0.5);
+}
+
+.category-icon {
+    font-size: 2rem;
+    color: #e8e1f7;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-name {
+    color: #d1d1d1;
+    font-style: italic;
+}
+
+/* Previous Year Winners */
+.previous-winners {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 136, 255, 0.3);
+}
+
+.previous-winners h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #d7d7f0;
+    text-shadow: 0 0 10px rgba(136, 181, 241, 0.5);
+}
+
+.year-section {
+    margin-bottom: 2rem;
+}
+
+.year-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ffff;
+}
+
+.year-header h3 {
+    font-size: 1.5rem;
+}
+
+.previous-winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.previous-winner-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 81, 255, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.previous-winner-card:hover {
+    transform: translateY(-5px);
+    border-color: #8800ff;
+    box-shadow: 0 0 20px rgba(21, 2, 100, 0.9);
+}
+
+.position-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.position-badge span {
+    position: absolute;
+    bottom: -20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #0011ff, #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.position-badge.first {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+.position-badge.second {
+    background: rgba(192, 192, 192, 0.2);
+    color: #c0c0c0;
+}
+
+.position-badge.third {
+    background: rgba(205, 127, 50, 0.2);
+    color: #cd7f32;
+}
+
+.winner-details h4 {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    color: #d1d1d1;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* Special Mentions */
+.special-mentions {
+    text-align: center;
+}
+
+.special-mentions h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #e5e6ed;
+    text-shadow: 0 0 10px rgba(136, 181, 241, 0.8);
+}
+
+.mentions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.mention-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(51, 0, 255, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.mention-card:hover {
+    transform: translateY(-5px);
+    border-color: #0033ff;
+    box-shadow: 0 0 20px rgba(81, 0, 255, 0.2);
+}
+
+.mention-card i {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.mention-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #0051ff;
+}
+
+.mention-card span {
+    color: #d1d1d1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .nav-item{
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .winners-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .podium {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .podium-place {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .podium-block {
+        width: 70px;
+    }
+
+    .category-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .mentions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .previous-winners-grid {
+        grid-template-columns: 1fr;
+    }
+}
